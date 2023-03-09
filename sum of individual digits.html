@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="name">hello world</h1>
+    <label>enter your number: </label>
+    <input type="text" id="user_name">
+    <button type="button" id="submit_button">submit</button>
+    <p id="result"></p>
+    <script>
+      document.getElementById("submit_button").onclick = function sumOfDigits()
+      {
+        let rem,sum;
+        let user_name = document.getElementById("user_name").value;
+         
+          
+            while(user_name > 0)
+          {
+            rem = user_name % 10;
+            sum = sum + rem;
+            user_name = user_name / 10;
+          }
+          user_name = sum;
+          
+          
+          let final_sum = Math.trunc(sum);
+         // final_sum = sum.toFixed();
+        
+        window.alert("sum of digits: " + final_sum);
+        
+      }
+       
+    </script>
+</body>
+</html>
