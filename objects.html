@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //object oriented programming in js
+        // let name="taehyung";
+        // let another_Name = "v";
+        // function winter_Bear() {
+        //     // let msg='Hello,i am '+name+' i have another name ' + another_Name;
+        //     let msg = `hello,i am ${name}, i am also called as ${another_Name} :)`;
+        //     console.log(msg);
+        // }
+        // winter_Bear();
+        let v={
+            name:"taehyung",
+            another_Name:"v",
+            group_Name:"bts",
+            active: true,
+            age:27,
+            brother:{
+                oleder:"kim namjoon",
+                younger:"jeon jungkook"
+            },
+            greeting:function(){
+                // since both function greeting and the variables such as name,group_Name,another_Name are placed on the same object,we should use "this" keyword
+                let msg = `Hello army, i am ${this.name} from ${this.group_Name},my stage name is ${this.another_Name}`;
+                console.log(msg);
+            }
+        }
+        v.greeting();
+    </script>
+</body>
+</html>
